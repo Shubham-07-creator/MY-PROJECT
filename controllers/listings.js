@@ -4,21 +4,48 @@ const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
 
+// module.exports.index = async (req, res) => {
+//     const { category } = req.query;
+
+//   let listings;
+
+//   if (category) {
+//     listings = await Listing.find({ category: category });
+//   } else {
+//     listings = await Listing.find({});
+//   }
+
+//     const allListings = await Listing.find({});
+//     res.render("listings/index.ejs", {allListings});
+// };
+
+
 module.exports.index = async (req, res) => {
-    const { category } = req.query;
+  console.log(req.query); // DEBUG
 
-  let listings;
+  const { search, category } = req.query;
+  let query = {};
 
-  if (category) {
-    listings = await Listing.find({ category: category });
-  } else {
-    listings = await Listing.find({});
+  if (search && search.trim() !== "") {
+    query.$or = [
+      { title:    { $regex: search, $options: "i" } },
+      { country:  { $regex: search, $options: "i" } },
+      { location: { $regex: search, $options: "i" } },
+      { category: { $regex: search, $options: "i" } }
+    ];
   }
 
-    const allListings = await Listing.find({});
-    res.render("listings/index.ejs", {allListings});
-};
+  if (category) {
+    query.category = category;
+  }
 
+  const allListings = await Listing.find(query);
+
+  res.render("listings/index.ejs", {
+    allListings,
+    search
+  });
+};
 
  module.exports.renderNewForm =  (req, res) => {
     res.render("listings/new.ejs");

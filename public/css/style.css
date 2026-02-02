@@ -129,36 +129,8 @@ body {
     width: 80vh;
 }
 
-/* Filters Adjustment */
-/* #filters {
-  gap: 20px;
-  padding: 12px 0;
-  flex-wrap: nowrap;  
+.card-text {
+    text-transform: capitalize;
 }
 
-.filter {
-  min-width: 90px;
-  cursor: pointer;
-}
 
-.filter i {
-  font-size: 1.3rem;
-}
-
-.filter p {
-  font-size: 14px;
-  margin: 0;
-} */
-
-/*  Small screens */
-/* @media (max-width: 468px) {
-  #filters {
-    flex-wrap: wrap;    
-    justify-content: center;
-  }
-
-  .filter {
-    width: 45%; 
-    margin-bottom: 12px;
-  }
-} */

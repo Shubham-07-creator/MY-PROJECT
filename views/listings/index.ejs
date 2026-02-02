@@ -11,11 +11,19 @@
         margin-right: 2rem;
         margin-top: 2rem;
         opacity: 0.7;
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+    .filter:visited {
+        color: inherit;
     }
 
     .filter:hover {
         opacity: 1;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .filter p {
@@ -37,7 +45,7 @@
     }
 </style>
 
-<div id="filters">
+<!-- <div id="filters">
     <div class="filter">
          <div><i class="fa-solid fa-fire"></i></div>
         <p>Trending</p>
@@ -88,7 +96,79 @@
     <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
   </div>
 </div>
+</div> -->
+
+
+<div id="filters">
+
+  <a href="/listings?category=trending" class="filter">
+    <div><i class="fa-solid fa-fire"></i></div>
+    <p>Trending</p>
+  </a>
+
+  <a href="/listings?category=rooms" class="filter">
+    <div><i class="fa-solid fa-bed"></i></div>
+    <p>Rooms</p>
+  </a>
+
+  <a href="/listings?category=iconic cities" class="filter">
+    <div><i class="fa-solid fa-mountain-city"></i></div>
+    <p>Iconic Cities</p>
+  </a>
+
+  <a href="/listings?category=mountains" class="filter">
+    <div><i class="fa-solid fa-mountain"></i></div>
+    <p>Mountains</p>
+  </a>
+
+  <a href="/listings?category=castles" class="filter">
+    <div><i class="fa-brands fa-fort-awesome"></i></div>
+    <p>Castles</p>
+  </a>
+
+  <a href="/listings?category=amazing pools" class="filter">
+    <div><i class="fa-solid fa-person-swimming"></i></div>
+    <p>Amazing Pools</p>
+  </a>
+
+  <a href="/listings?category=camping" class="filter">
+    <div><i class="fa-solid fa-campground"></i></div>
+    <p>Camping</p>
+  </a>
+
+  <a href="/listings?category=farms" class="filter">
+    <div><i class="fa-solid fa-tractor"></i></div>
+    <p>Farms</p>
+  </a>
+
+  <a href="/listings?category=arctic" class="filter">
+    <div><i class="fa-regular fa-snowflake"></i></div>
+    <p>Arctic</p>
+  </a>
+
+  <a href="/listings?category=domes" class="filter">
+    <div><i class="fa-solid fa-igloo"></i></div>
+    <p>Domes</p>
+  </a>
+
+  <a href="/listings?category=boats" class="filter">
+    <div><i class="fa-solid fa-sailboat"></i></div>
+    <p>Boats</p>
+  </a>
+  
+  <div class="tax-toggle">
+    <div class="form-check-reverse form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+      <label class="form-check-label" for="switchCheckDefault">
+        Display total after taxes
+      </label>
+    </div>
+  </div>
+
 </div>
+
+
+
 
 <!-- <div class="tax-toggle mt-3">
   <div class="form-check-reverse form-switch">
