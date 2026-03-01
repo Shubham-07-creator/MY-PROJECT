@@ -13,12 +13,12 @@ body {
 /* Navbar */
 .navbar {
     height: 5rem;
-    background-color: white;
+    background-color: rgb(236, 230, 230);
 }
-/* 
-.fa-compass {
-    color: #fe424d;
-    font-size: 2rem;
+
+/* .fa-house-chimney-user {
+    color: #091fe9;
+    font-size: 5rem;
 } */
 
 .nav-link {
@@ -118,10 +118,6 @@ body {
     padding-right: 0;
 }
 
-.navbar-brand img{
-   height: 75px;
-   width: 75px;
-}
 
 /* map */
 #map {
@@ -132,5 +128,4 @@ body {
 .card-text {
     text-transform: capitalize;
 }
-
 
