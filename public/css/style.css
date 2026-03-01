@@ -129,3 +129,13 @@ body {
     text-transform: capitalize;
 }
 
+#filters{
+  overflow-x:auto;
+  white-space:nowrap;
+  scrollbar-width:none;
+}
+
+.filter{
+  display:inline-block;
+}
+
