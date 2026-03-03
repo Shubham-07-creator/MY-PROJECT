@@ -126,31 +126,4 @@ body {
     text-transform: capitalize;
 }
 
-<<<<<<< HEAD
-=======
-#filters{
-  overflow-x:auto;
-  white-space:nowrap;
-  scrollbar-width:none;
-}
 
-.filter{
-  display:inline-block;
-}
-
-img{
-  max-width:100%;
-  height:auto;
-}
-
-.card{
-  border-radius:15px;
-}
-
-@media(max-width:768px){
-  .navbar-brand img{ 
-    height:35px;
-  }
-}
-
->>>>>>> fc902e7 (update)
