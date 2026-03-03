@@ -66,11 +66,6 @@ const sessionOptions = {
 };
 
 
-// app.get('/', (req, res) => {
-//     res.send('Welcome to StayHub!');
-// });
-
-
 app.use(session(sessionOptions));
 app.use(flash());
 
